@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guesser</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-area">
+        <h1 class="heading">Number Guesser</h1>
+        <img class="heading-image" src="./img/favicon.png" />
+        <div class="difficulty-levels">
+          <h2 id="levels">Levels :</h2>
+          <button class="easy">Easy</button>
+          <button class="moderate">Moderate</button>
+          <button class="hard">Hard</button>
+        </div>
+        <h4 class="heading">Guess a number between 1 and 10</h4>
+      </div>
+      <!-- Guess Area -->
+      <div class="guess-area">
+        <input type="number" id="guess-input" placeholder="?" />
+        <button class="guess">Guess</button>
+      </div>
+      <!-- Result Area -->
+      <div class="result-area">
+        <div class="result-message">
+          <small id="result-msg">Correct Guess!</small>
+          <small id="guess-left">You've Won!</small>
+        </div>
+        <div class="result-display">
+          <!-- <img src="./img/wrong.png" /> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

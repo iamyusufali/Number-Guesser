@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+/* Colors-used: #1e4747, #61d4b3, #aaf86e, ccedd2 */
+
+body {
+  background-color: #153b3b;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-area,
+.result-area {
+  text-align: center;
+}
+
+.guess-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.heading-image {
+  width: 120px;
+}
+
+/* Difficulty Levels */
+.difficulty-levels {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.difficulty-levels button {
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 3px 5px;
+  width: 60px;
+  font-weight: 600;
+}
+
+/* Level-Colors: #4cb648, #fcc72c, #cf3333 */
+button.easy {
+  background-color: #4cb648;
+  border: 1px solid #4cb648;
+}
+
+button.moderate {
+  background-color: #fcc72c;
+  border: 1px solid #fcc72c;
+}
+
+button.hard {
+  background-color: #cf3333;
+  border: 1px solid #cf3333;
+}
+
+/* Levels Hover */
+button.easy:hover {
+  box-shadow: -1px 2px 23px 2px #4cb648;
+  transform: scale(1.05);
+}
+
+button.moderate:hover {
+  box-shadow: -1px 2px 23px 2px #fcc72c;
+  transform: scale(1.05);
+}
+
+button.hard:hover {
+  box-shadow: -1px 2px 23px 2px #cf3333;
+  transform: scale(1.05);
+}
+
+/* Levels Active */
+.easy.active {
+  box-shadow: -1px 2px 23px 2px #4cb648;
+  transform: scale(1.08);
+}
+
+.moderate.active {
+  box-shadow: -1px 2px 23px 2px #fcc72c;
+  transform: scale(1.08);
+}
+
+.hard.active {
+  box-shadow: -1px 2px 23px 2px #cf3333;
+  transform: scale(1.08);
+}
+
+/* Headings */
+h2#levels {
+  color: #add1cc;
+  background-color: rgba(173, 209, 204, 0.11);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+h1.heading {
+  font-size: 55px;
+  font-weight: 400;
+  color: #add1cc;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  letter-spacing: 3px;
+}
+
+h4.heading {
+  background-color: rgba(173, 209, 204, 0.11);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #b0c5c2;
+  letter-spacing: 2px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  /* display: block; */
+  width: 30%;
+  height: 75px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 48px;
+  font-weight: 900;
+  color: #5a635b;
+  text-align: center;
+  background-color: #ccedd2;
+  border: 1px solid #ccedd2;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+input[type='number']:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: -1px 2px 20px 2px #ccedd2;
+  color: transparent;
+  text-shadow: 0px 0px 0px #434e52;
+}
+
+input[type='number']::placeholder {
+  color: #434e52;
+}
+
+button.guess {
+  outline: none;
+  height: 75px;
+  width: 15%;
+  padding: 8px 0 8px 5px;
+  font-size: 22px;
+  letter-spacing: 3px;
+  border: 1px solid #61d4b3;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #61d4b3;
+  color: #242a2c;
+  cursor: pointer;
+}
+
+button.guess:hover {
+  transform: scaleX(1.1);
+  border-color: transparent;
+  box-shadow: 8px 2px 23px 2px #61d4b3;
+}
+
+.result-message small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 26px;
+  color: #aaf86e;
+}
