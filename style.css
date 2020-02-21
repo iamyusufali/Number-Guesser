@@ -64,8 +64,8 @@ button.moderate {
 }
 
 button.hard {
-  background-color: #cf3333;
-  border: 1px solid #cf3333;
+  background-color: #f5744d;
+  border: 1px solid #f5744d;
 }
 
 /* Levels Hover */
@@ -80,7 +80,7 @@ button.moderate:hover {
 }
 
 button.hard:hover {
-  box-shadow: -1px 2px 23px 2px #cf3333;
+  box-shadow: -1px 2px 23px 2px #f5744d;
   transform: scale(1.05);
 }
 
@@ -96,12 +96,21 @@ button.hard:hover {
 }
 
 .hard.active {
-  box-shadow: -1px 2px 23px 2px #cf3333;
+  box-shadow: -1px 2px 23px 2px #f5744d;
+  transform: scale(1.08);
+}
+
+/* Level Disabled */
+button:disabled {
+  color: #000;
+}
+
+button:disabled:hover {
   transform: scale(1.08);
 }
 
 /* Headings */
-h2#levels {
+h2#level-heading {
   color: #add1cc;
   background-color: rgba(173, 209, 204, 0.11);
   border-radius: 5px;
@@ -137,10 +146,11 @@ input[type='number'] {
   /* display: block; */
   width: 30%;
   height: 75px;
+  padding-bottom: 12px;
   font-family: 'Patrick Hand', cursive;
   font-size: 48px;
   font-weight: 900;
-  color: #5a635b;
+  color: #434e52;
   text-align: center;
   background-color: #ccedd2;
   border: 1px solid #ccedd2;
@@ -157,7 +167,12 @@ input[type='number']:focus {
 }
 
 input[type='number']::placeholder {
-  color: #434e52;
+  color: #5b7680;
+  font-size: 26px;
+}
+
+input[type= 'number']:disabled {
+  cursor: not-allowed;
 }
 
 button.guess {
