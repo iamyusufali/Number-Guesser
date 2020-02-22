@@ -298,6 +298,7 @@ button.guess:hover {
   }
 
   .difficulty-levels button {
+    margin-right: 5px;
     width: 38px;
     height: 18px;
     font-size: 8px;
@@ -311,7 +312,7 @@ button.guess:hover {
   }
 
   input[type='number']::placeholder {
-    font-size: 15px;
+    font-size: 10px;
   }
 
   button.guess {
