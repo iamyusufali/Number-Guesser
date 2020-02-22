@@ -24,11 +24,21 @@ body {
   text-align: center;
 }
 
+.heading-area,
 .guess-area {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.guess-area {
+  flex-direction: row;
   margin-bottom: 25px;
+}
+
+.result-area {
+  display: none;
 }
 
 .heading-image {
@@ -37,6 +47,7 @@ body {
 
 /* Difficulty Levels */
 .difficulty-levels {
+  width: 100%;
   margin-bottom: 22px;
   display: flex;
   justify-content: space-evenly;
@@ -110,14 +121,7 @@ button:disabled:hover {
 }
 
 /* Headings */
-h2#level-heading {
-  color: #add1cc;
-  background-color: rgba(173, 209, 204, 0.11);
-  border-radius: 5px;
-  padding: 0 10px;
-}
-
-h1.heading {
+h1.main-heading {
   font-size: 55px;
   font-weight: 400;
   color: #add1cc;
@@ -126,10 +130,18 @@ h1.heading {
   letter-spacing: 3px;
 }
 
-h4.heading {
+h2.level-heading {
+  color: #add1cc;
   background-color: rgba(173, 209, 204, 0.11);
   border-radius: 5px;
-  padding: 5px;
+  padding: 0 10px;
+}
+
+h4.info-heading {
+  width: 350px;
+  background-color: rgba(173, 209, 204, 0.11);
+  border-radius: 5px;
+  padding: px;
   margin: 5px 0 25px 0;
   font-size: 20px;
   font-weight: 600;
@@ -171,7 +183,7 @@ input[type='number']::placeholder {
   font-size: 26px;
 }
 
-input[type= 'number']:disabled {
+input[type='number']:disabled {
   cursor: not-allowed;
 }
 
@@ -201,4 +213,110 @@ button.guess:hover {
   margin-bottom: 5px;
   font-size: 26px;
   color: #aaf86e;
+}
+
+/* For responsive design */
+@media (max-width: 450px) {
+  button.guess {
+    height: 60px;
+    width: 18%;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  h4.info-heading {
+    font-size: 18px;
+    width: 300px;
+    padding: 3px 5px;
+  }
+
+  input[type='number'] {
+    height: 60px;
+  }
+
+  input[type='number']::placeholder {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  h1.main-heading {
+    font-size: 35px;
+  }
+
+  img.heading-image {
+    height: 65px;
+    width: 70px;
+  }
+
+  .difficulty-levels {
+    width: 300px;
+  }
+
+  h2.level-heading {
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  .difficulty-levels button {
+    width: 45px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  h4.info-heading {
+    font-size: 15px;
+    width: 250px;
+    padding: 3px 0;
+  }
+
+  input[type='number'] {
+    height: 50px;
+  }
+
+  input[type='number']::placeholder {
+    font-size: 18px;
+  }
+
+  button.guess {
+    height: 50px;
+  }
+
+  .result-message small {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  h2.level-heading {
+    font-size: 15px;
+    margin-right: 0px;
+  }
+
+  .difficulty-levels button {
+    width: 38px;
+    height: 18px;
+    font-size: 8px;
+    font-weight: 800;
+  }
+
+  input[type='number'] {
+    font-size: 28px;
+    height: 40px;
+    padding: 0 0 2px 0;
+  }
+
+  input[type='number']::placeholder {
+    font-size: 15px;
+  }
+
+  button.guess {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .result-message small {
+    font-size: 18px;
+  }
 }

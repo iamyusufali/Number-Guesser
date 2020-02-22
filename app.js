@@ -2,9 +2,10 @@ const gameLevels = document.querySelector('.difficulty-levels'),
   easyMode = document.querySelector('button.easy'),
   moderateMode = document.querySelector('button.moderate'),
   hardMode = document.querySelector('button.hard'),
-  levelInfo = document.querySelector('h4.heading'),
+  levelInfo = document.querySelector('h4.info-heading'),
   guessInput = document.querySelector('#guess-input'),
-  guessButton = document.querySelector('button.guess');
+  guessButton = document.querySelector('button.guess'),
+  resultArea = document.querySelector('.result-area');
 
 // Change Game Level
 function changeGameLevel(e) {
@@ -51,9 +52,26 @@ function generateRandomNumber(level) {
 
 // Check result
 function checkResult(e) {
-  return null;
+  if (parseFloat(guessInput.value) === randomNumber) {
+    console.log('Matched');
+    resultArea.style.display = 'block';
+    guessButton.textContent = 'Play Again';
+  } else {
+    attemptsLeft();
+  }
+}
+
+// Display attempts left
+function attemptsLeft() {
+  let guessLeft = 3;
+  const resultMsg = resultArea.querySelector('#result-msg');
+  const guessMsg = resultArea.querySelector('#guess-left');
+
+  resultMsg.textContent = 'Wrong Guess!';
+  guessMsg.textContent = `Only ${guessLeft} guesses are left.`;
+  resultArea.style.display = 'block';
 }
 
 // Event Listener
 gameLevels.addEventListener('click', changeGameLevel);
-guessInput.addEventListener('keyup', checkResult);
+guessButton.addEventListener('click', checkResult);
