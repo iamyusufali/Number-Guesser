@@ -138,6 +138,7 @@ h2.level-heading {
 }
 
 h4.info-heading {
+  width: 340px;
   background-color: rgba(173, 209, 204, 0.11);
   border-radius: 5px;
   padding: px;
@@ -184,6 +185,14 @@ input[type='number']::placeholder {
 
 input[type='number']:disabled {
   cursor: not-allowed;
+}
+
+input[type='number'].no-input {
+  border: 2px solid #f5744d;
+}
+
+input[type='number'].no-input::placeholder {
+  color: #f5744d;
 }
 
 button.guess {
@@ -298,7 +307,6 @@ button.guess:hover {
   }
 
   .difficulty-levels button {
-    margin-right: 5px;
     width: 38px;
     height: 18px;
     font-size: 8px;
@@ -312,7 +320,7 @@ button.guess:hover {
   }
 
   input[type='number']::placeholder {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   button.guess {
