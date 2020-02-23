@@ -30,6 +30,9 @@ function changeGameLevel(e) {
         element.disabled = false;
       }
     });
+
+    // Remove border and change placeholder
+    removeBorderAndPlaceholder();
   }
 }
 
