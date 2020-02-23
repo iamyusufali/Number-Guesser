@@ -216,6 +216,15 @@ button.guess:hover {
   box-shadow: 8px 2px 23px 2px #61d4b3;
 }
 
+button.guess:disabled {
+  cursor: not-allowed;
+  transform: scaleX(1);
+}
+
+button.guess:disabled:hover {
+  box-shadow: none;
+}
+
 .result-message small {
   display: block;
   margin-bottom: 5px;
