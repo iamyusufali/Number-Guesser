@@ -5,13 +5,14 @@
   font-family: 'Patrick Hand', cursive;
 }
 
-/* Colors-used: #1e4747, #61d4b3, #aaf86e, ccedd2 */
+/* Colors-used: #153b3b, #61d4b3, #aaf86e, ccedd2 */
 
 body {
   background-color: #153b3b;
   margin: 0;
 }
 
+/* Container styles */
 .container {
   display: flex;
   flex-direction: column;
@@ -63,7 +64,7 @@ body {
   font-weight: 600;
 }
 
-/* Level-Colors: #4cb648, #fcc72c, #cf3333 */
+/* Level-Colors: #4cb648, #fcc72c, #f5744d */
 button.easy {
   background-color: #4cb648;
   border: 1px solid #4cb648;
@@ -112,11 +113,28 @@ button.hard:hover {
 }
 
 /* Level Disabled */
-button:disabled {
+button.level:disabled {
   color: #000;
 }
 
-button:disabled:hover {
+button.level:disabled:hover {
+  cursor: auto;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+button.level.easy.active:disabled:hover {
+  box-shadow: -1px 2px 23px 2px #4cb648;
+  transform: scale(1.08);
+}
+
+button.level.moderate.active:disabled:hover {
+  box-shadow: -1px 2px 23px 2px #fcc72c;
+  transform: scale(1.08);
+}
+
+button.level.hard.active:disabled:hover {
+  box-shadow: -1px 2px 23px 2px #f5744d;
   transform: scale(1.08);
 }
 
@@ -230,6 +248,11 @@ button.guess:disabled:hover {
   margin-bottom: 5px;
   font-size: 26px;
   color: #aaf86e;
+}
+
+.result-image img {
+  margin-top: 0;
+  width: 150px;
 }
 
 /* For responsive design */
