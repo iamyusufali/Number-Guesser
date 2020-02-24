@@ -327,6 +327,10 @@ button.guess:disabled:hover {
     height: 50px;
   }
 
+  button.guess.new-game {
+    font-size: 12px;
+  }
+
   .result-message small {
     font-size: 22px;
   }
@@ -358,6 +362,10 @@ button.guess:disabled:hover {
   button.guess {
     height: 40px;
     font-size: 14px;
+  }
+
+  button.guess.new-game {
+    font-size: 9px;
   }
 
   .result-message small {
