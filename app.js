@@ -178,6 +178,7 @@ function displayAttemptsLeft(attemptsLeft) {
 function gameOver() {
   guessInput.disabled = 'true';
   guessButton.textContent = 'NEW GAME';
+  guessButton.classList.add('new-game');
   resultMsg.style.color = '#f5744d';
   guessMsg.style.color = '#f5744d';
   resultMsg.textContent = '';

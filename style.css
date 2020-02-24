@@ -364,3 +364,47 @@ button.guess:disabled:hover {
     font-size: 18px;
   }
 }
+
+@media (max-width: 280px) {
+  h2.level-heading {
+    font-size: 12px;
+    margin-right: 0px;
+  }
+
+  .difficulty-levels button {
+    margin: 2px;
+    width: 28px;
+    height: 15px;
+    font-size: 6px;
+    font-weight: bold;
+  }
+
+  button.moderate {
+    font-size: 5px;
+  }
+
+  input[type='number'] {
+    padding: 0 0 2px 0;
+  }
+
+  input[type='number']::placeholder {
+    font-size: 8px;
+  }
+
+  button.guess {
+    font-size: 12px;
+  }
+
+  button.guess.new-game {
+    font-size: 8px;
+  }
+
+  .result-message small {
+    font-size: 15px;
+  }
+
+  .result-image img {
+    height: 85px;
+    width: 90px;
+  }
+}
